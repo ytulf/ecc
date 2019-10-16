@@ -4,8 +4,6 @@ use std::num::FromStrRadix;
 use num::{BigUint, Zero, One};
 use num::bigint::ToBigUint;
 
-// To do:  Follow Rust pattern of implementing .to_field() functions on a
-//     handful of standard types.
 // -------------------------------------------------------------------------
 // Generic Field and FieldElement descriptions / implementations.
 // -------------------------------------------------------------------------

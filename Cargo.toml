@@ -1,7 +1,7 @@
 [package]
 
 name = "ecc"
-description = "An elliptic curve arithmetic and cryptography library."
+description = "An elliptic curve arithmetic and cryptography library. - Modification"
 version = "0.1.0"
 authors = ["Thomas SAVIO <ytulf@pm.me>"]
 license = "MIT"

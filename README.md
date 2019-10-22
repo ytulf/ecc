@@ -15,6 +15,8 @@ The obligatory calling-my-code-terrible-and-warning-you-to-use-it-at-your-own-pe
 1.  ElGamal encryption
 2.  ECDSA / ElGamal signatures
 3.  Create documentation into blog.savio.ovh
+4.  Add explication and futur into blog
+5. 
 
 
 Basics

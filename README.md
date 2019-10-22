@@ -16,7 +16,6 @@ The obligatory calling-my-code-terrible-and-warning-you-to-use-it-at-your-own-pe
 2.  ECDSA / ElGamal signatures
 3.  Create documentation into blog.savio.ovh
 4.  Add explication and futur into blog
-5. 
 
 
 Basics
@@ -116,3 +115,7 @@ fn main() {
   let A = a * G;
 }
 ```
+
+---
+
+Explanation on blog.savio.ovh -> You will soon be able to see some new features on this site.

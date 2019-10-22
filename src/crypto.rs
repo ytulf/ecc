@@ -9,6 +9,7 @@ use curves::{Curve, AffinePoint};
 
 pub struct DiffieHellman;
 
+// Implementation for DH
 impl DiffieHellman {
     pub fn key_gen<C: Curve<F, G>, F: Field, G: Field>() -> (AffinePoint<C, F, G>, BigUint) {
         let mut rng = match rand::OsRng::new() {
@@ -37,11 +38,12 @@ impl DiffieHellman {
     }
 }
 
-
+// Structur Encryption ELGamal
 pub struct ElGamalEncryptor<C: Curve<F, G>, F: Field, G: Field> {
     pub pub_key: AffinePoint<C, F, G>,
 }
 
+// Implementation ELGamal
 impl<C: Curve<F, G>, F: Field, G: Field> ElGamalEncryptor<C, F, G> {
     pub fn encrypt(&self, msg: &AffinePoint<C, F, G>) -> (AffinePoint<C, F, G>, AffinePoint<C, F, G>) {
         let (K, k) = DiffieHellman::key_gen();
@@ -51,12 +53,12 @@ impl<C: Curve<F, G>, F: Field, G: Field> ElGamalEncryptor<C, F, G> {
     }
 }
 
-
+// Structur Decryptor ELGamal
 pub struct ElGamalDecryptor<C: Curve<F, G>, F: Field, G: Field> {
     pub pub_key: AffinePoint<C, F, G>,
     pub priv_key: BigUint
 }
-
+// Implementation Decryptor ELGamal
 impl<C: Curve<F, G>, F: Field, G: Field> ElGamalDecryptor<C, F, G> {
     pub fn new(sk: &BigUint) -> ElGamalDecryptor<C, F, G> {
         let c: C = Default::default();
@@ -66,7 +68,7 @@ impl<C: Curve<F, G>, F: Field, G: Field> ElGamalDecryptor<C, F, G> {
             priv_key: (*sk).clone()
         }
     }
-
+    // Generate key generator from Decryptor ELGamal
     pub fn new_key_gen() -> ElGamalDecryptor<C, F, G> {
         let (A, a): (AffinePoint<C, F, G>, BigUint) = DiffieHellman::key_gen();
 

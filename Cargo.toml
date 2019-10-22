@@ -7,4 +7,4 @@ authors = ["Thomas SAVIO <ytulf@pm.me>"]
 license = "MIT"
 
 [dependencies.num]
-version = "0.1.0"
+version = "0.1.1"
